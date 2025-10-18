@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AirtableSchedule</string>
+    <string name="start_date">Start date:</string>
+    <string name="end_date">End date:</string>
+    <string name="welcome">Welcome</string>
+    <string name="instructions">We suggest that you use the app in landscape view format. This timeline works quarterly. This will show a row of events from the last 90 days. As upcoming features, we will provide a list for you to choose other quarters. Note that the events are grouped by week and we are only showing the first two events of the week to facilitate your experience, we will implement a button to see all the events that week, not just the first two.</string>
+</resources>
