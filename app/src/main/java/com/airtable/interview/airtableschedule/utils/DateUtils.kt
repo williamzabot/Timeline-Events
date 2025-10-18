@@ -35,7 +35,7 @@ fun groupByWeek(events: List<Event>): Map<Int, List<Event>> {
     val zone = ZoneId.systemDefault()
     val firstDate = events.minOf { it.startDate.toInstant().atZone(zone).toLocalDate() }
 
-    return events.groupBy { event ->
+    val grouped = events.groupBy { event ->
         val eventDate = event.startDate.toInstant().atZone(zone).toLocalDate()
         val daysSinceStart = ChronoUnit.DAYS.between(
             firstDate,
@@ -43,4 +43,6 @@ fun groupByWeek(events: List<Event>): Map<Int, List<Event>> {
         ).toInt()
         (daysSinceStart / 7) + 1
     }
+
+    return grouped.toSortedMap()
 }
